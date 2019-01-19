@@ -15,4 +15,4 @@ RUN apk add --update --no-cache --virtual \
     && pip install -r requirements.txt
 # && apk del build-dependencies
 
-#COPY ./app /app
+COPY ./app .

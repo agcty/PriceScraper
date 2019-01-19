@@ -19,9 +19,9 @@ class QuotesSpider(scrapy.Spider):
             yield response.follow(next_page, self.parse)
 
 
-process = CrawlerProcess({
-    'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)'
-})
+# process = CrawlerProcess({
+#     'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)'
+# })
 
-process.crawl(QuotesSpider)
-process.start() # the script will block here until the crawling is finished
+# process.crawl(QuotesSpider)
+# process.start() # the script will block here until the crawling is finished
