@@ -1,7 +1,7 @@
 FROM tiangolo/uwsgi-nginx-flask:python3.7-alpine3.8
 
-COPY ./app/requirements.txt /app
-WORKDIR /app
+COPY ./app/requirements.txt .
+#WORKDIR /app
 
 #--virtual groups build packages with the name build-dependencies to remove later
 RUN apk add --update --no-cache --virtual \
@@ -15,4 +15,4 @@ RUN apk add --update --no-cache --virtual \
     && pip install -r requirements.txt
 # && apk del build-dependencies
 
-COPY ./app /app
+#COPY ./app /app
